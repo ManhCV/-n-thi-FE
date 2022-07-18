@@ -1,0 +1,33 @@
+1.4 Giải thuật
+
+1.4.1 Các giải thuật tìm kiếm
+	-Điểm chính: 2 loại giải thuật tìm kiếm: tìm kiếm tuyến tính và tìm kiếm nhị phân
+	             Trong tìm kiếm nhị phân, các phân tử đc sắp xếp theo thứ tự tăng dần hoặc giảm dần
+				 
++ Tìm kiếm tuyến tính (tuần tự)
+	Là phương pháp tìm kiếm phần tử được yêu cầu từ vị trí đầu tiên của bảng
+	Nó có thể đc tìm kiếm mà không cần quan tâm các phần tử được sắp xếp ntn
+	-> Nó lâu hơn tìm kiếm nhị phân
+	
++ Tìm kiếm nhị phân
+	Đây là pp tìm kiếm hiệu quả khi các phần tử được sắp xếp theo thứ tự tăng dần
+	hoặc giảm dần. Phép so sánh được thực hiện tuần tự với giá trị nằm giữa của bảng
+	Sau phép so sánh đầu tiên, nửa bên trái hoặc bên phải bị vứt bỏ, và giá trị ở giữa
+	của phần còn lại được sử dụng cho phép so sánh tiếp theo. Phạm vi tìm kiếm giảm
+	một nửa sau mỗi lần.
+	->Tìm kiếm kiểu này nhanh hơn thời gian trung bình của tìm kiếm tuyến tính
+	
+	*Lưu ý: Đặt L là giới hạn dưới (phần tử đầu tiên)
+	            U là giới hạn trên (phần tử cuối cùng)
+			Thực hiện lần lượt các phép so sánh ở trên, nếu L>M thì phần tử tìm kiếm 
+			không tồn tại
+
+# So sánh giữa phương pháp tìm kiếm tuyến tính và tìm kiếm nhị phân
+Để đánh giá vấn đề này, có 1 khái niệm gọi là độ phức tạp tính toán.
+Khi số phần tử N là rất lớn, giá trị này nói cho ta biết rằng trung bình cần bao nhiêu
+phép so sánh.
+
+Độ phức tạp của phương pháp tìm kiếm tuyến tính = N / 2
+Số phép so sánh tối đa của phương pháp tìm kiếm tuyến tính = N
+Độ phức tạp của phương pháp tìm kiếm nhị phân = [log2N]
+Số phép so sánh tối đa của phương pháp tìm kiếm nhị phân = số phép so sánh trung bình + 1
